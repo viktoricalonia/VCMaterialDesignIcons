@@ -35,7 +35,7 @@
 - (void)setCode:(NSString *)mdCode {
   VCMaterialDesignIcons *icons = [VCMaterialDesignIcons iconWithCode:mdCode fontSize:30.f];
   [icons addAttribute:NSForegroundColorAttributeName value:[self getRandomColor]];
-  self.imageView.image = [icons imageWithSize:CGSizeMake(30.f, 30.f)];
+  self.imageView.image = [icons image];
 }
 
 - (UIColor *)getRandomColor {

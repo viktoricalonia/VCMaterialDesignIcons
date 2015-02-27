@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "VCMaterialDesignIcons"
-  s.version      = "1.0.0"
+  s.version      = "1.1.1"
   s.summary      = "MaterialDesign icon api for IOS - Objective C"
   s.homepage     = "https://github.com/viktoricalonia/VCMaterialDesignIcons"
   s.platform     = :ios, '7.0'
@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
                    Material Design Icons v1.1.1. check on http://zavoloklom.github.io/material-design-iconic-font/ 
                    DESC
 
-  s.ios.frameworks = 'UIKit', 'ioretext'
+  s.ios.frameworks = 'UIKit', 'Coretext'
 
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
 
   s.author             = { "viktor calonia" => "viktoricalonia@yahoo.com" }
 
-  s.source       = { :git => "https://github.com/viktoricalonia/VCMaterialDesignIcons.git", :tag => "1.0.0"}
+  s.source       = { :git => "https://github.com/viktoricalonia/VCMaterialDesignIcons.git", :tag => "1.1.1"}
 
 
   s.source_files  = "*.{h,m}"
