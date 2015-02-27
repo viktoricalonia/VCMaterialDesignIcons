@@ -4,6 +4,9 @@ Pod::Spec.new do |s|
   s.name         = "VCMaterialDesignIcons"
   s.version      = "1.0.0"
   s.summary      = "MaterialDesign icon api for IOS - Objective C"
+  s.homepage     = "https://github.com/viktoricalonia/VCMaterialDesignIcons"
+  s.platform     = :ios, '7.0'
+  s.requires_arc = true
 
   s.description  = <<-DESC
                    Convenience methods for adding material design icon and converting to images.
@@ -18,7 +21,7 @@ Pod::Spec.new do |s|
 
   s.author             = { "viktor calonia" => "viktoricalonia@yahoo.com" }
 
-  s.source       = { :git => "https://github.com/viktoricalonia/VCMaterialDesignIcons.git"}
+  s.source       = { :git => "https://github.com/viktoricalonia/VCMaterialDesignIcons.git", :tag => "v1.0.0"}
 
 
   s.source_files  = "*.{h,m}"
