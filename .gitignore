@@ -1,0 +1,31 @@
+# Xcode
+build/*
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+#*.xcworkspace
+#!default.xcworkspace
+xcuserdata
+profile
+*.moved-aside
+
+# This seems to be created by XCode 5 but I have no idea what it means. It doesn't look 
+# important though.
+*.xccheckout
+
+!contents.xcworkspacedata
+
+appledoc
+
+.DS_Store
+
+# Appcode
+.idea
+
+# CocoaPods
+Pods
