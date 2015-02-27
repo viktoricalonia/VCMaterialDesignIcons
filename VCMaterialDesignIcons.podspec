@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
 
   s.author             = { "viktor calonia" => "viktoricalonia@yahoo.com" }
 
-  s.source       = { :git => "https://github.com/viktoricalonia/VCMaterialDesignIcons.git", :tag => "v1.0.0"}
+  s.source       = { :git => "https://github.com/viktoricalonia/VCMaterialDesignIcons.git", :tag => "1.0.0"}
 
 
   s.source_files  = "*.{h,m}"
