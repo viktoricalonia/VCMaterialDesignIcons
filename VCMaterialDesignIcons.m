@@ -760,7 +760,9 @@ const struct VCMaterialDesignIconCode VCMaterialDesignIconCode = {
 
 @interface VCMaterialDesignIcons ()
 
-@property (strong, nonatomic) NSMutableAttributedString *mutableAttributedString;
+@property (strong, nonatomic) NSMutableAttributedString *iconAttributedString;
+
+@property (nonatomic) CGFloat fontSize;
 
 @end
 
@@ -783,8 +785,9 @@ const struct VCMaterialDesignIconCode VCMaterialDesignIconCode = {
 
 + (instancetype)iconWithCode:(NSString *)code fontSize:(CGFloat)fontSize {
   VCMaterialDesignIcons *icon = [VCMaterialDesignIcons new];
-  icon.mutableAttributedString = [NSMutableAttributedString.alloc initWithString:code
-                                                                       attributes:@{NSFontAttributeName: [self iconFontWithSize:fontSize]}];
+  icon.fontSize = fontSize;
+  icon.iconAttributedString = [NSMutableAttributedString.alloc initWithString:code
+                                                                   attributes:@{NSFontAttributeName: [self iconFontWithSize:fontSize]}];
   return icon;
 }
 
@@ -797,12 +800,10 @@ const struct VCMaterialDesignIconCode VCMaterialDesignIconCode = {
 - (UIImage *)imageWithSize:(CGSize)imageSize {
   UIGraphicsBeginImageContextWithOptions(imageSize, NO, 0.0);
 
-  [self.mutableAttributedString drawInRect:({
-    CGSize iconSize = [self.mutableAttributedString size];
+  [self.iconAttributedString drawInRect:({
+    CGSize iconSize = [self.iconAttributedString size];
     CGFloat xOffset = (imageSize.width - iconSize.width) / 2.0;
-    xOffset += self.drawingOffset.horizontal;
     CGFloat yOffset = (imageSize.height - iconSize.height) / 2.0;
-    yOffset += self.drawingOffset.vertical;
     CGRectMake(xOffset, yOffset, iconSize.width, iconSize.height);
   })];
 
@@ -812,24 +813,28 @@ const struct VCMaterialDesignIconCode VCMaterialDesignIconCode = {
   return iconImage;
 }
 
+- (UIImage *)image {
+  return [self imageWithSize:CGSizeMake(self.fontSize, self.fontSize)];
+}
+
 - (void)addAttributes:(NSDictionary *)attributes {
-  [self.mutableAttributedString addAttributes:attributes range:[self rangeForAttributedText]];
+  [self.iconAttributedString addAttributes:attributes range:[self rangeForAttributedText]];
 }
 
 - (void)addAttribute:(NSString *)name value:(id)value {
-  [self.mutableAttributedString addAttribute:name value:value range:[self rangeForAttributedText]];
+  [self.iconAttributedString addAttribute:name value:value range:[self rangeForAttributedText]];
 }
 
 - (void)removeAttribute:(NSString *)name {
-  [self.mutableAttributedString removeAttribute:name range:[self rangeForAttributedText]];
+  [self.iconAttributedString removeAttribute:name range:[self rangeForAttributedText]];
 }
 
 - (id)attribute:(NSString *)attrName {
-  return [self.mutableAttributedString attributesAtIndex:0 effectiveRange:NULL];
+  return [self.iconAttributedString attributesAtIndex:0 effectiveRange:NULL];
 }
 
 - (NSRange)rangeForAttributedText {
-  return NSMakeRange(0, [self.mutableAttributedString length]);
+  return NSMakeRange(0, [self.iconAttributedString length]);
 }
 
 + (NSArray *)allIcons {

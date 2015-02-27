@@ -1,5 +1,5 @@
 PODS:
-  - VCMaterialDesignIcons (0.0.1)
+  - VCMaterialDesignIcons (1.0.0)
 
 DEPENDENCIES:
   - VCMaterialDesignIcons (from `../../`)
@@ -9,6 +9,6 @@ EXTERNAL SOURCES:
     :path: ../../
 
 SPEC CHECKSUMS:
-  VCMaterialDesignIcons: ff95c38dd215142e3e873878e6e7435df4b8887a
+  VCMaterialDesignIcons: c3e4d59e76f5857d994d5a94bf877dbc5bc34571
 
 COCOAPODS: 0.35.0

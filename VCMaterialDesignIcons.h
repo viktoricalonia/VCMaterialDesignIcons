@@ -759,12 +759,13 @@ extern const struct VCMaterialDesignIconCode {
 
 @interface VCMaterialDesignIcons : NSObject
 
-@property (nonatomic) UIOffset drawingOffset;
-
+// create icon for given code
 + (instancetype)iconWithCode:(NSString *)code fontSize:(CGFloat)fontSize;
 
-- (UIImage *)imageWithSize:(CGSize)imageSize;
+// returns image from Material Design Icon Code specified.
+- (UIImage *)image;
 
+// icon attribute manipulation for drawing image
 - (void)addAttributes:(NSDictionary *)attributes;
 
 - (void)addAttribute:(NSString *)name value:(id)value;
