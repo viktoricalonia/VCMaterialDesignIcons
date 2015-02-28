@@ -1,6 +1,9 @@
 # VCMaterialDesignIcons
 Material Design Icons for IOS - Objective C 
 
+[![Platform](http://img.shields.io/badge/platform-ios-blue.svg?style=flat
+)](https://developer.apple.com/iphone/index.action)
+
 ##About
 Material Design Icon Fonts are from http://zavoloklom.github.io/material-design-iconic-font/icons.html
 
@@ -31,4 +34,5 @@ before running demo workspace do:
 on `MaterialDesignDemo` directory
 
 ##Contribution
-    Forks for this library are welcome.
+
+Forks for this library are welcome.
