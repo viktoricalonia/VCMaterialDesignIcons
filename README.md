@@ -7,7 +7,7 @@ Material Design Icons for IOS - Objective C
 ##About
 Material Design Icon Fonts are from http://zavoloklom.github.io/material-design-iconic-font/icons.html
 
-##Integration
+##Usage
 
     #import <VCMaterialDesignIcons/VCMaterialDesignIcons>
 
