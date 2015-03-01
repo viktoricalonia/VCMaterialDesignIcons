@@ -27,11 +27,9 @@ Material Design Icon Fonts are from http://zavoloklom.github.io/material-design-
     
 ##Running Demo
 
-before running demo do:
-    
-    pod update
+before running demo do: 
 
-on `MaterialDesignDemo` directory and open MaterialDesignDemo project through MaterialDesignDemo.xcworkspace
+`pod update` on `MaterialDesignDemo` directory and open MaterialDesignDemo project through MaterialDesignDemo.xcworkspace
 
 ##Contribution
 
